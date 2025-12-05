@@ -1,0 +1,32 @@
+{
+  "name": "chrome-extension-tester",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node tests/run-tests.ts",
+    "test:popup": "ts-node tests/popup.test.ts",
+    "test:content": "ts-node tests/content-script.test.ts",
+    "test:feed": "ts-node tests/feed.test.ts",
+    "test:feed-logged-in": "ts-node tests/feed-logged-in.test.ts",
+    "test:feed-stealth": "ts-node tests/feed-stealth.test.ts",
+    "login": "ts-node tests/simple-login.ts",
+    "install-chrome": "npx @puppeteer/browsers install chrome@stable"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0",
+  "description": "X Profile Notes Chrome Extension with Stagehand-powered automated testing",
+  "dependencies": {
+    "@browserbasehq/stagehand": "^3.0.5",
+    "@types/node": "^24.10.1",
+    "dotenv": "^17.2.3",
+    "rebrowser-playwright": "^1.52.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "zod": "^4.1.8"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.32",
+    "sharp": "^0.34.5"
+  }
+}
